@@ -1,19 +1,22 @@
 package OOP;
 
-public class Raumverwalltung extends Raum {
-  private Raum raum;
+import java.util.ArrayList;
+import java.util.List;
 
-  public Raumverwalltung() {}
+public class Raumverwalltung extends Raum {
+  private List<Raum> raeume;
+
+  public Raumverwalltung() {
+    this.raeume = new ArrayList<> ();
+  }
 
   public void addRaum(Raum raum) {
-
+    raeume.add(raum);
   }
 
   public void ausgabeRaumliste() {
-    if (raum.getNutzer () != null) {
-      System.out.println (raum.Raumbezeichnung ());    }
-    else {
-      System.out.println ();
+    for (Raum raum : raeume) {
+      System.out.println(raum);
     }
   }
 }
