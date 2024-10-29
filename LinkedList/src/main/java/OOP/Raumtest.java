@@ -3,8 +3,6 @@ package OOP;
 public class Raumtest {
   public static void main(String[] args) {
       Raumverwalltung raumverwaltung = new Raumverwalltung ();
-      Raum raum = new Raum ();
-      Professor professor = new Professor ();
 
       Professor prof1 = new Professor("Konstantin Koll");
       Professor prof2 = new Professor("Michael Stark");
