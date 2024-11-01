@@ -1,6 +1,6 @@
 package OOP;
 
-public class Raum extends Professor{
+public class Raum {
   private char trakt;
   private char etage;
   private String nummer;
@@ -12,7 +12,6 @@ public class Raum extends Professor{
     this.trakt = trakt;
     this.etage = etage;
     this.nummer = nummer;
-    this.prof = null;
   }
 
   public char getTrakt() {
@@ -38,9 +37,10 @@ public class Raum extends Professor{
     this.prof = null;
   }
 
-  public String Raumbezeichnung() {
+@Override
+  public String toString() {
     if (prof == null) {
-      return "Raum " + trakt + "." + etage + "." + nummer ;
+      return "Raum " + trakt + "." + etage + "." + nummer + ":" ;
     } else {
       return "Raum " + trakt + "." + etage + "." + nummer + ": " + prof.getName ();
     }
